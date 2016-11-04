@@ -1,0 +1,12 @@
+ds_api_homepage:
+    path:     /
+    defaults: { _controller: DSApiBundle:Default:index }
+    
+ds_api_signup:
+    path: /signup
+    defaults: { _controller: DSApiBundle:Security:signup}
+    
+ds_api_signin:
+    path: /sign-in
+    defaults: { _controller: DSApiBundle:Security:signin}
+    

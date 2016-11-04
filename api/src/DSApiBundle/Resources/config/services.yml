@@ -1,0 +1,4 @@
+services:
+#    ds_api.example:
+#        class: DSApiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

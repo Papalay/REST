@@ -1,0 +1,15 @@
+ds_api:
+    resource: "@DSApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ds_home:
+    path: /api/home
+    defaults: { _controller: DSApiBundle:Security:home}
+
+ds_admin:
+    path: /api/admin
+    defaults: { _controller: DSApiBundle:Security:admin}
+    
+logout:
+    path: /logout
+    

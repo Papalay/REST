@@ -1,0 +1,21 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+     get_set_method_normalizer:
+         class: Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer
+         public: false
+         tags:
+             - { name: serializer.normalizer }
+     jwt_token_authenticator:
+        class: DSApiBundle\Security\JwtTokenAuthenticator
+        autowire: true
+        
+        
+
+         

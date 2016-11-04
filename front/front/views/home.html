@@ -1,0 +1,23 @@
+ <md-toolbar class="md-padding">
+     <md-menu class="pull-right" style="margin-right : 0px;">
+         <md-button ng-click="openMenu($mdOpenMenu, $event)">
+          {{user.username}}
+         </md-button>
+         <md-menu-content width="4">
+             <md-menu-item>
+                 <a ui-sref="admin" style="text-decoration: none;"><i class="icon-wrench">&nbsp;Parametres</i></a>
+             </md-menu-item>
+             <md-divider></md-divider>
+             <md-menu-item>
+                 <a ui-sref="logout" style="text-decoration: none;"><i class="icon-power-off">&nbsp;Déconnexion</i></a>
+             </md-menu-item>
+         </md-menu-content>
+     </md-menu>
+</md-toolbar>
+<ui-view></ui-view>
+<script type="text/javascript">
+ $(document).ready( function(){
+     $('#Global').css({'display' : 'none'});
+ });
+
+</script>

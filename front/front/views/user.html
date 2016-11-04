@@ -1,0 +1,25 @@
+<div ng-controller="adminCtrl" >
+        <div id="signup" layout="column" style="text-align : center;" class="col-md-3 col-md-offset-4">
+            <div class="md-menu-demo"> 
+                <div class="menu-demo-container">
+                    <h2 class="md-title">Parametres du compte</h2>
+                    <form role="form" name="AdminForm" ng-submit="formSubmit(AdminForm.$valid)" id="formAdmin" novalidate>
+                         <md-input-container>
+                            <label>Username</label>
+                            <input type="text" name="username" ng-model="user.username" ng-readonly="true">
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Email</label>
+                            <input type="email" name="email" ng-model="user.email" required>
+                        </md-input-container>
+                        <md-input-container>
+                            <label>Mot de passe</label>
+                            <input type="password" name="password" ng-model="user.password" required> 
+                        </md-input-container>
+                        <md-button class="md-primary" type="submit">Enregistrer</md-button> </br>  
+                        <span class="text-success" ng-show="REGISTER_OK">Réussie :D</span>
+                    </form>
+                </div>
+            </div>    
+    </div>
+</div>

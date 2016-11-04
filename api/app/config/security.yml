@@ -1,0 +1,39 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        in_memory:
+            memory: ~
+            
+        database_users:
+            entity: { class: DSApiBundle:User }
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+
+        api:
+            pattern: ^/api/
+            anonymous: false
+            stateless: true
+            provider: database_users
+            guard:       
+                authenticators:
+                    - jwt_token_authenticator
+            
+
+    encoders:
+        DSApiBundle\Entity\User:
+            algorithm:           sha512
+            encode_as_base64:    true
+            iterations:      1
+
+
+        
+        
+            
