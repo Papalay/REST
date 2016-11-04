@@ -17,3 +17,6 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+    
+    secret: 232d909490db9e9a686536fb6b4b046e480fdff1
+    jwt_key_pass_phrase: dsapi
